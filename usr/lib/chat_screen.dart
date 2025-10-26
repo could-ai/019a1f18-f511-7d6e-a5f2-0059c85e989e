@@ -52,6 +52,7 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           ),
           _buildMessageComposer(),
+          _buildDisclaimer(),
         ],
       ),
     );
@@ -77,6 +78,18 @@ class _ChatScreenState extends State<ChatScreen> {
             onPressed: _handleSendPressed,
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildDisclaimer() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+      color: Colors.grey[200],
+      child: const Text(
+        "This is a friendly chat. Please be respectful to everyone.",
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 12, color: Colors.grey),
       ),
     );
   }
